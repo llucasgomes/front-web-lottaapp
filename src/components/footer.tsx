@@ -7,10 +7,10 @@ export const Footer = () => {
       <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
         <div className="flex gap-2 items-center text-primary font-bold">
           <Navigation className="h-5 w-5" />
-          <span>RotaFácil</span>
+          <span>LottApp</span>
         </div>
         <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-          &copy; {new Date().getFullYear()} RotaFácil. Todos os direitos reservados.
+          &copy; {new Date().getFullYear()} LottApp. Todos os direitos reservados.
         </p>
         <div className="flex items-center space-x-4">
           <Link href="#" className="text-sm text-muted-foreground underline-offset-4 hover:underline">
