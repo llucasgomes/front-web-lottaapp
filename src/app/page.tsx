@@ -1,91 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { BarChart, Clock, MapPin, Shield } from "lucide-react";
+import { Shield } from "lucide-react";
 import Image from "next/image";
+import { Banner } from "./_components/sections/banner";
+import { Recursos } from "./_components/sections/recursos";
 
 
 
 export default function Home() {
   return (
     <main className="flex-1">
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-        <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Gerencie suas rotas de microônibus com facilidade
-                </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Escolha as melhores rotas, acompanhe o tempo em tempo real e otimize seu trabalho diário por apenas
-                  R$40 mensais.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Button size="lg">Experimente Grátis</Button>
-                <Button size="lg" variant="outline">
-                  Saiba Mais
-                </Button>
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <Image
-                src="https://kzmoevxsx0tgudgqdbnz.lite.vusercontent.net/placeholder.svg?height=550&width=550"
-                width={550}
-                height={550}
-                alt="Imagem de um motorista usando o aplicativo RotaFácil"
-                className="rounded-lg object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <Banner />
 
-      <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
-                Recursos
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Tudo que você precisa para gerenciar suas rotas
-              </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Nossa plataforma foi desenvolvida pensando nas necessidades dos motoristas de microônibus.
-              </p>
-            </div>
-          </div>
-          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
-            <div className="flex flex-col items-center space-y-4 rounded-lg border p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <MapPin className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-bold">Seleção de Rotas</h3>
-              <p className="text-center text-muted-foreground">
-                Visualize e escolha as melhores rotas disponíveis para maximizar sua eficiência.
-              </p>
-            </div>
-            <div className="flex flex-col items-center space-y-4 rounded-lg border p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <Clock className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-bold">Monitoramento em Tempo Real</h3>
-              <p className="text-center text-muted-foreground">
-                Acompanhe o tempo das rotas à sua frente e ajuste seu cronograma conforme necessário.
-              </p>
-            </div>
-            <div className="flex flex-col items-center space-y-4 rounded-lg border p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <BarChart className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-bold">Análise de Desempenho</h3>
-              <p className="text-center text-muted-foreground">
-                Obtenha relatórios detalhados sobre seu desempenho e identifique oportunidades de melhoria.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Recursos />
 
       <section id="pricing" className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
