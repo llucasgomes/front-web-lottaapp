@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 
 export const metadata: Metadata = {
-  title: "RotaFácil - Gerenciamento de Rotas para Microônibus",
+  title: "LottApp - Gerenciamento de Rotas para Microônibus",
   description:
     "Escolha as melhores rotas, acompanhe o tempo em tempo real e otimize seu trabalho diário por apenas R$40 mensais.",
 }
