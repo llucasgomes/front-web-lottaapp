@@ -28,7 +28,7 @@ export const Banner = () => {
               src="https://kzmoevxsx0tgudgqdbnz.lite.vusercontent.net/placeholder.svg?height=550&width=550"
               width={550}
               height={550}
-              alt="Imagem de um motorista usando o aplicativo RotaFácil"
+              alt="Imagem de um motorista usando o aplicativo LottApp"
               className="rounded-lg object-cover"
             />
           </div>
