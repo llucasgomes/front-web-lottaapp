@@ -4,14 +4,14 @@ import Link from "next/link"
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
+    <header className="sticky top-0 z-40 w-full border-b bg-background px-9">
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
         <div className="flex gap-2 items-center text-primary font-bold text-xl">
           <Navigation className="h-6 w-6" />
-          <span>RotaFácil</span>
+          <span>LottApp</span>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <nav className="flex items-center space-x-1">
+          <nav className="flex items-center space-x-1 gap-4">
             <Link
               href="#features"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
