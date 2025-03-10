@@ -326,8 +326,8 @@ export default function RecursosPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  "O LottApp mudou completamente minha rotina de trabalho. Consigo escolher as melhores rotas e
-                  economizo pelo menos 1 hora por dia evitando congestionamentos."
+                  &quot;O LottApp mudou completamente minha rotina de trabalho. Consigo escolher as melhores rotas e
+                  economizo pelo menos 1 hora por dia evitando congestionamentos.&quot;
                 </p>
               </CardContent>
             </Card>
@@ -346,8 +346,8 @@ export default function RecursosPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  "A função de monitoramento em tempo real é incrível! Consigo ver exatamente quando o último ônibus
-                  passou e ajustar meu ritmo para maximizar o número de passageiros."
+                  &quot;A função de monitoramento em tempo real é incrível! Consigo ver exatamente quando o último ônibus
+                  passou e ajustar meu ritmo para maximizar o número de passageiros.&quot;
                 </p>
               </CardContent>
             </Card>
@@ -366,8 +366,8 @@ export default function RecursosPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  "Os relatórios de desempenho me ajudaram a identificar que estava gastando combustível demais em
-                  certas rotas. Após ajustes, economizo cerca de R$300 por mês!"
+                  &quot;Os relatórios de desempenho me ajudaram a identificar que estava gastando combustível demais em
+                  certas rotas. Após ajustes, economizo cerca de R$300 por mês!&quot;
                 </p>
               </CardContent>
             </Card>
