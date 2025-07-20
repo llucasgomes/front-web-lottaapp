@@ -41,7 +41,7 @@ export default function PaymentFailed() {
                 </Link>
               </Button>
               <Button asChild className="flex-1 bg-red-600 hover:bg-red-700">
-                <Link href="/payment" className="flex items-center justify-center gap-2">
+                <Link href="lottapp://(auth)/sign-in" className="flex items-center justify-center gap-2">
                   <RefreshCw className="w-4 h-4" />
                   Tentar Novamente
                 </Link>

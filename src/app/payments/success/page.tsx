@@ -25,7 +25,7 @@ export default function PaymentSuccess() {
 
             <div className="pt-4">
               <Button asChild className="w-full bg-green-600 hover:bg-green-700">
-                <Link href="/" className="flex items-center justify-center gap-2">
+                <Link href="lottapp://(auth)/sign-in" className="flex items-center justify-center gap-2">
                   <ArrowLeft className="w-4 h-4" />
                   Voltar ao Início
                 </Link>
