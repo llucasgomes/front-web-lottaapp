@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button"
+import { SignedIn, SignedOut, SignInButton, SignOutButton, UserButton } from "@clerk/nextjs"
 import { MenuIcon, Navigation } from "lucide-react"
 import Link from "next/link"
-import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet"
+import { Sheet, SheetClose, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet"
 
 export const Header = () => {
   return (
@@ -34,7 +35,20 @@ export const Header = () => {
             >
               Como Funciona
             </Link>
-            <Button size="sm">Começar Agora</Button>
+            <SignedIn>
+               <Link
+              href="/map"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
+              Mapa
+            </Link>
+              <UserButton />
+            </SignedIn>
+            <SignedOut>
+              <SignInButton>
+                <Button size="sm" className="cursor-pointer">Começar Agora</Button>
+              </SignInButton>
+            </SignedOut>
           </nav>
         </div>
         <div className="md:hidden flex-1 items-end justify-end space-x-4">
@@ -53,21 +67,55 @@ const MenuMobile = () => {
         <MenuIcon size={40} />
       </SheetTrigger>
       <SheetContent>
-        <SheetHeader className="border-b px-4 py-6">
+        <SheetHeader className="flex flex-row border-b gap-3 px-4 py-6">
+          <SignedIn>
+            <div className="ml-4">
+
+            <UserButton />
+            </div>
+          </SignedIn>
           <SheetTitle className="text-2xl font-bold">Menu</SheetTitle>
         </SheetHeader>
         <nav className="flex-grow">
           <ul className="space-y-1 pb-4 pt-2 text-sm px-9">
+            
             <NavItemMobile href={'/features'} title={'Recursos'} />
             <NavItemMobile href={'/pricing'} title={'Preços'} />
             <NavItemMobile href={'/how-it-works'} title={'Como Funciona'} />
+            <SignedIn>
+                <NavItemMobile href={'/map'} title={'Mapa'} />
+             
+            </SignedIn>
+          
+             
+             
+
+            <SignedOut>
+             <SignInButton>
+              <li>
+                <SheetClose asChild>
+                  <Button size="sm" className="cursor-pointer w-full">Começar Agora</Button>
+                </SheetClose>
+              </li>
+            </SignInButton>
+            </SignedOut>
+
+            <SignedIn>
+  <SignOutButton>
+              <li>
+                <SheetClose asChild>
+                  <Button size="sm" className="cursor-pointer w-full">Sair</Button>
+                </SheetClose>
+              </li>
+            </SignOutButton>
+            </SignedIn>
           </ul>
         </nav>
-        {/* <SheetFooter className="border-t p-4">
-          <p className="text-sm text-gray-500">
+        <SheetFooter className="border-t p-4">
+          <p className="text-sm text-white">
             &copy; 2024 ARC SPORTS, Inc rights reserved
           </p>
-        </SheetFooter> */}
+        </SheetFooter>
       </SheetContent>
     </Sheet>
   )
