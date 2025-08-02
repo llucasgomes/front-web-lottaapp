@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import "@/styles/global.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import 'mapbox-gl/dist/mapbox-gl.css';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
