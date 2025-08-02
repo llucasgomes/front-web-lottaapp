@@ -15,6 +15,12 @@ const nextConfig: NextConfig = {
         pathname: "/wp-content/uploads/**",
       },
     ]
+  },
+  experimental:{
+    globalNotFound:true
+  },
+  env:{
+    CLERK_PUBLISHABLE_KEY: process.env.CLERK_PUBLISHABLE_KEY,
   }
 };
 
