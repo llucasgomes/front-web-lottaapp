@@ -20,10 +20,11 @@ import { useUserLocation } from './useUserLocation'
 
 export default function Map() {
   const mapContainer = useRef<HTMLDivElement>(null)
-  const { theme } = useTheme() // ← Tema do sistema/claro/escuro
+  const { resolvedTheme } = useTheme() // ← Tema do sistema/claro/escuro
   const map = useRef<mapboxgl.Map | null>(null)
-  const { location: userLocation, error } = useUserLocation()
-  const [otherUsers, setOtherUsers] = useState<User[]>(initialOtherUsers)
+
+  const { location: userLocation } = useUserLocation()
+  const [otherUsers] = useState<User[]>(initialOtherUsers)
 
   // Inicializa o mapa só uma vez
   useEffect(() => {
@@ -32,7 +33,7 @@ export default function Map() {
 
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: theme === 'dark'
+      style: resolvedTheme === 'dark'
           ? 'mapbox://styles/mapbox/dark-v11'
           : 'mapbox://styles/mapbox/streets-v11',
       center: userLocation ?? [-43.1819, -22.9035],
@@ -40,7 +41,7 @@ export default function Map() {
     })
 
     map.current.addControl(new mapboxgl.NavigationControl())
-  }, [userLocation])
+  }, [userLocation,resolvedTheme])
 
   // Usa hook custom para manipular marcadores
   useMapMarkers(map.current, userLocation, otherUsers)

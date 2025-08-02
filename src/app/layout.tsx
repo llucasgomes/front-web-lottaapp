@@ -25,8 +25,8 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="pt-BR" suppressHydrationWarning>
-        <body className={`${inter.className} flex min-h-screen flex-col`}>
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <body className={`${inter.className} flex min-h-screen flex-col antialiased`}>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <Header />
             {children}
             <Footer />
