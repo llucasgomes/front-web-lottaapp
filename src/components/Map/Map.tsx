@@ -7,14 +7,10 @@ import { useMapMarkers } from './useMapMarkers'
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!
 
-type User = {
-  id: string
-  name: string
-  coords: [number, number]
-}
 
 // Só um mock inicial
 import { getSocket } from '@/service/socket-io'
+import { MotoristaOnline, User } from '@/types'
 import { useUser } from '@clerk/nextjs'
 import { useTheme } from 'next-themes'
 import { useUserLocation } from './useUserLocation'
@@ -57,7 +53,7 @@ export default function Map() {
     const socket = getSocket()
 
     // Recebe lista atualizada de motoristas
-  socket.on('location:all', (lista: any[]) => {
+  socket.on('location:all', (lista: MotoristaOnline[]) => {
     const outros = lista
       .filter((m) => m.id !== user.id)
       .map((m) => ({
